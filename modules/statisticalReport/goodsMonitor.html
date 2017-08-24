@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>标准化通用物资到货监控表</title>
+	<link rel="stylesheet" href="../../statics/css/main.css"/>
+	<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+  <!--头部-->
+	<div class="manager-header commonWidth">
+		<div class="header-left">
+			<span class="welcome-tip">欢迎您！</span>
+			<a href="" class="login-btn">登录</a>
+			<a href="" class="register-btn">注册</a>
+		</div>
+		<div class="header-right">
+			<i class="news-icon"></i>
+			<a href="" class="news-btn">消息</a>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="manager-logo-part">
+		<div class="commonWidth clearfix">
+			<div class="wrap-pic">
+				<a href="">
+					<img src="../../statics/images/img_logo.png" alt=""/>
+				</a>
+		  </div>
+		  <div class="wrap-search">
+				<input type="search" placeholder="输入产品名称" class="search"/>
+				<span class="wrap-icon">
+					<i class="icon-search"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="wrap-manager-content">
+		<div class="manager-content-tab">
+			<ul class="commonWidth clearfix">
+				<li class="tab-item"><a class="link" href="index.html">首页</a></li>
+				<li class="tab-item "><a class="link" href="modules/productManager/productManager.html">产品管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../requirePlan/requirePlan.html">需求计划</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="requirePlanBuild.html">需求计划创建</a></dd>
+				  	<dd class="menu-item"><a href="requirePlan.html">需求计划管理</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanTotal.html">地市需求计划单汇总</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanProviceTotal.html">省需求计划单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../requirePlanPurchase/requirePurchase.html">需求计划采购</a></li>
+				<li class="tab-item"><a class="link" href="../readyGoodsManager/readyGoods.html">大区备货管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../productClaim/productBulid.html">产品申领</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="productBulid.html">产品申领单创建</a></dd>
+				  	<dd class="menu-item"><a href="productClaim.html">产品申领单管理</a></dd>
+				  	<dd class="menu-item"><a href="productAreaTotal.html">地市产品申领单汇总</a></dd>
+				  	<dd class="menu-item"><a href="">省产品申领单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../deliverGoods/deliverGoods.html">大区确认发货</a></li>
+				<li class="tab-item"><a class="link" href="../collectionInfo/collectContractInfo.html">集采合同信息管理</a></li>
+				<li class="tab-item activeItem dropdown-item">
+				  <a class="link" href="../statisticalReport/goodsRequirePlan.html">统计报表</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="goodsRequirePlan.html">需求计划统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsClaim.html">物资申领统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsMonitor.html">物资到货监控表</a></dd>
+				  	<dd class="menu-item"><a href="claimAndRequirePlan.html">月度准确度报表</a></dd>
+				  	<dd class="menu-item"><a href="creditScore.html">信用积分统计报表</a></dd>
+				  	<dd class="menu-item"><a href="situationMonitor.html">执行情况监控表</a></dd>
+				  </dl>
+				</li>
+			</ul>
+		</div>
+		<div class="manager-content commonWidth">
+			<div class="product-search clearfix">
+				<div class="wrap-search-left clearfix">
+					<div class="search-code">
+						<div class="inner-left wrap-time inner-common">
+							<label class="label pull-left">月份</label>
+							<div class="add-overflow">
+								<div class="pull-left time-left">
+								  <input type="text" id="startDate" readonly placeholder="开始日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+								<span class="pull-left">至</span>
+								<div class="pull-left time-left">
+								  <input type="text" id="endDate" readonly placeholder="结束日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search-status">
+						<label class="label">单位</label>
+						<div class="wrap-input">
+							<select class="input inputCommon">
+								<option value="">全部</option>
+								<option value="">启用</option>
+								<option value="">停用</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-search-btn">
+					<a href="" class="btn reset-btn"><i></i>重置</a>
+				  <a href="" class="btn query-btn"><i></i>查询</a>
+				</div>
+			</div>
+			<!--表格部分咯-->
+			<div class="wrap-table">
+				<div class="title-operate clearfix">
+					<div class="title-info pull-left">
+						<div class="manager-nav table-nav">
+							<strong class="all-name">标准化通用物资到货监控表</strong>
+							<i class="angle"></i>
+							<span>共36份</span>
+						</div>
+					</div>
+					<div class="operate-info pull-right">
+						<a href="" class="small-operate-btn">导出</a>
+					</div>
+				</div>
+				<div class="table scrollTable">
+					<table width="2000px">
+						<thead class="outer-thead">
+							<tr>
+							  <td>全选<label class="label"><input type="checkbox" value="" name=""/></label></td>
+							  <td>单位</td>
+								<td>申领部门</td>
+								<td>填报人</td>
+								<td>申领月份</td>
+								<td>申领单据号</td>
+								<td>申领项目名称</td>
+								<td>项目编号</td>
+								<td>物资名称</td>
+								<td>物资型号</td>
+								<td>资金类型</td>
+								<td>单价(元)</td>
+								<td>实际申领数量(皮公里)</td>
+								<td>总金额(元)</td>
+								<td>省公司SCM具体采购订单号</td>
+								<td>省公司MIS具体采购订单号</td>
+								<td>到货数量(皮公里)</td>
+								<td>到货金额</td>
+								<td>未到货数量(皮公里)</td>
+								<td>未到货金额(元)</td>
+								<td>备注</td>
+							</tr>
+						</thead>
+						<tbody class="outer-tbody">
+							<tr class="outer-tr">
+							  <td><label class="label"><input type="checkbox" value="" name=""/></label></td>
+							  <td>广州</td>
+								<td>采购物流中心</td>
+								<td>黄硕</td>
+								<td>2017年2月</td>
+								<td>BZHCPKXQGZ201702010011</td>
+								<td>16年移动LTE融合业务支持系统</td>
+								<td>B1121L1C</td>
+								<td>普通光缆</td>
+								<td>GYTA144芯</td>
+								<td>成本</td>
+								<td>15</td>
+								<td>15</td>
+								<td>15</td>
+								<td>810011642</td>
+								<td>84411642</td>
+								<td>25</td>
+								<td>250000</td>
+								<td>10</td>
+								<td>150000</td>
+								<td></td>
+							</tr>
+							<tr class="outer-tr">
+							  <td><label class="label"><input type="checkbox" value="" name=""/></label></td>
+							  <td>广州</td>
+								<td>采购物流中心</td>
+								<td>黄硕</td>
+								<td>2017年2月</td>
+								<td>BZHCPKXQGZ201702010011</td>
+								<td>16年移动LTE融合业务支持系统</td>
+								<td>B1121L1C</td>
+								<td>普通光缆</td>
+								<td>GYTA144芯</td>
+								<td>成本</td>
+								<td>15</td>
+								<td>15</td>
+								<td>15</td>
+								<td>810011642</td>
+								<td>84411642</td>
+								<td>25</td>
+								<td>250000</td>
+								<td>10</td>
+								<td>150000</td>
+								<td></td>
+							</tr>
+							<tr class="outer-tr">
+							  <td><label class="label"><input type="checkbox" value="" name=""/></label></td>
+							  <td>广州</td>
+								<td>采购物流中心</td>
+								<td>黄硕</td>
+								<td>2017年2月</td>
+								<td>BZHCPKXQGZ201702010011</td>
+								<td>16年移动LTE融合业务支持系统</td>
+								<td>B1121L1C</td>
+								<td>普通光缆</td>
+								<td>GYTA144芯</td>
+								<td>成本</td>
+								<td>15</td>
+								<td>15</td>
+								<td>15</td>
+								<td>810011642</td>
+								<td>84411642</td>
+								<td>25</td>
+								<td>250000</td>
+								<td>10</td>
+								<td>150000</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="manager-footer">
+	  <div class="commonWidth">
+			<span class="name">中移动广东公司</span>
+			<span>©版权所有2008-2017</span>
+		</div>
+	</div>
+</body>
+</html>

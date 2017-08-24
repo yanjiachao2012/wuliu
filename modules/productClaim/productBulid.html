@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>创建产品申领单</title>
+	<link rel="stylesheet" href="../../statics/css/main.css"/>
+	<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+  <!--头部-->
+	<div class="manager-header commonWidth">
+		<div class="header-left">
+			<span class="welcome-tip">欢迎您！</span>
+			<a href="" class="login-btn">登录</a>
+			<a href="" class="register-btn">注册</a>
+		</div>
+		<div class="header-right">
+			<i class="news-icon"></i>
+			<a href="" class="news-btn">消息</a>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="manager-logo-part">
+		<div class="commonWidth clearfix">
+			<div class="wrap-pic">
+				<a href="">
+					<img src="../../statics/images/img_logo.png" alt=""/>
+				</a>
+		  </div>
+		  <div class="wrap-search">
+				<input type="search" placeholder="输入产品名称" class="search"/>
+				<span class="wrap-icon">
+					<i class="icon-search"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="wrap-manager-content">
+		<div class="manager-content-tab">
+			<ul class="commonWidth clearfix">
+				<li class="tab-item"><a class="link" href="index.html">首页</a></li>
+				<li class="tab-item "><a class="link" href="modules/productManager/productManager.html">产品管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../requirePlan/requirePlan.html">需求计划</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="requirePlanBuild.html">需求计划创建</a></dd>
+				  	<dd class="menu-item"><a href="requirePlan.html">需求计划管理</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanTotal.html">地市需求计划单汇总</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanProviceTotal.html">省需求计划单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../requirePlanPurchase/requirePurchase.html">需求计划采购</a></li>
+				<li class="tab-item"><a class="link" href="../readyGoodsManager/readyGoods.html">大区备货管理</a></li>
+				<li class="tab-item activeItem dropdown-item">
+				  <a class="link" href="../productClaim/productBulid.html">产品申领</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="productBulid.html">产品申领单创建</a></dd>
+				  	<dd class="menu-item"><a href="productClaim.html">产品申领单管理</a></dd>
+				  	<dd class="menu-item"><a href="productAreaTotal.html">地市产品申领单汇总</a></dd>
+				  	<dd class="menu-item"><a href="">省产品申领单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../deliverGoods/deliverGoods.html">大区确认发货</a></li>
+				<li class="tab-item"><a class="link" href="../collectionInfo/collectContractInfo.html">集采合同信息管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../statisticalReport/goodsRequirePlan.html">统计报表</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="goodsRequirePlan.html">需求计划统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsClaim.html">物资申领统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsMonitor.html">物资到货监控表</a></dd>
+				  	<dd class="menu-item"><a href="claimAndRequirePlan.html">月度准确度报表</a></dd>
+				  	<dd class="menu-item"><a href="">信用积分统计报表</a></dd>
+				  	<dd class="menu-item"><a href="">执行情况监控表</a></dd>
+				  </dl>
+				</li>
+			</ul>
+		</div>
+		<div class="manager-content commonWidth">
+			<div class="manager-nav section-nav">
+				<span>全部结果</span>
+				<i class="angle"></i>
+				<span class="selected-item"><em>光缆</em><i class="icon-remove"></i>&nbsp;</span>
+				<i class="angle"></i>
+				共36个结果
+			</div>
+			<div class="product-sort">
+				<dl>
+					<dd>
+						<div class="sort-left">一级分类</div>
+						<div class="sort-right">
+							<a href="">光缆</a>
+							<a href="">馈线</a>
+							<a href="">移动通讯设备</a>
+							<a href="">计算机线路材料</a>
+							<a href="">传输线路材料</a>
+							<a href="">it网络设备</a>
+							<a href="">wlan设备</a>
+							<a href="">基站设备</a>
+							<a href="">光缆</a>
+							<a href="">光缆</a>
+							<a href="">传输线路材料</a>
+							<a href="">it网络设备</a>
+							<a href="">wlan设备</a>
+							<a href="">基站设备</a>
+							<a href="">光缆</a>
+							<a href="">光缆</a>
+						</div>
+						<span class="more-btn">更多</span>
+					</dd>
+					<dd>
+						<div class="sort-left">二级分类</div>
+						<div class="sort-right">
+							<a href="">光缆</a>
+							<a href="">馈线</a>
+							<a href="">移动通讯设备</a>
+							<a href="">计算机线路材料</a>
+							<a href="">传输线路材料</a>
+							<a href="">it网络设备</a>
+							<a href="">wlan设备</a>
+							<a href="">基站设备</a>
+							<a href="">光缆</a>
+							<a href="">光缆</a>
+							<a href="">传输线路材料</a>
+							<a href="">it网络设备</a>
+							<a href="">wlan设备</a>
+							<a href="">基站设备</a>
+							<a href="">光缆</a>
+							<a href="">光缆</a>
+						</div>
+						<span class="more-btn">更多</span>
+					</dd>
+					<dd>
+						<div class="sort-left">规格编号</div>
+						<div class="sort-right">
+							<a href="">6芯</a>
+							<a href="">8芯</a>
+							<a href="">12芯</a>
+							<a href="">16芯</a>
+							<a href="">18芯</a>
+							<a href="">20芯</a>
+						</div>
+						<span class="more-btn">更多</span>
+					</dd>
+				</dl>
+			</div>
+			<!--表格部分咯-->
+			<div class="layer-col product-build">
+				<div class="layer-left">
+					<div class="layer-title">
+						 已选产品清单(6)
+						 <a href="" class="refresh-btn layer-btn">刷新</a>
+					</div>
+					<div class="layer-main">
+						<div class="layer-show-selected">
+							<label class="label"><input type="checkbox" name=""/>全选</label>
+							<a href="" class="remove-btn layer-btn">删除</a>
+						</div>
+						<div class="text-boolean">是否特殊工单 
+							<select class="select pull-right">
+								<option>是</option>
+								<option>否</option>
+							</select>
+						</div>
+						<ul>
+							<li class="item">
+								<div class="item-up"><label class="label"><input type="checkbox" name=""/></label><i class="icon-close"></i></div>
+								<div class="item-down">
+									<span>普通光缆6芯/1000公里</span>
+								  <span>￥2000</span>
+								  <span>项目</span>
+								  <span>16年移动LTE融合业务支持系统</span>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-up"><label class="label"><input type="checkbox" name=""/></label><i class="icon-close"></i></div>
+								<div class="item-down">
+									<span>普通光缆6芯/1000公里</span>
+								  <span>￥2000</span>
+								  <span>项目</span>
+								  <span>16年移动LTE融合业务支持系统</span>
+								</div>
+							</li>
+							<li class="item">
+								<div class="item-up"><label class="label"><input type="checkbox" name=""/></label><i class="icon-close"></i></div>
+								<div class="item-down">
+									<span>普通光缆6芯/1000公里</span>
+								  <span>￥2000</span>
+								  <span>项目</span>
+								  <span>16年移动LTE融合业务支持系统</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="up-file">
+						<label class="upFile">上传附件<input type="file" /></label>
+						<dl class="file-lists">
+							<dd><a href="">2017.6.5 广州移动需求计划说明1</a><i class="icon-close"></i></dd>
+							<dd><a href="">2017.6.5 广州移动需求计划说明1</a><i class="icon-close"></i></dd>
+						</dl>
+					</div>
+					<div class="layer-foot">
+						<div class="foot-show-selected">
+							已选产品<strong>6</strong>件
+						</div>
+						<div class="foot-show-selected">总价:<strong>1200.0000.0000</strong></div>
+						<button type="button" class="save-btn foot-btn" onclick="pop.showPop('previewLock');">预览需求计划单</button>
+						<button class="submit-btn foot-btn">提交需求计划单</button>
+					</div>
+				</div>
+				<div class="layer-right">
+					<div class="wrap-table">
+						<div class="title-operate clearfix">
+							<div class="title-info">
+								<div class="manager-nav table-nav">
+									<strong class="all-name">全部物资</strong>
+									<div class="radio-group marginTop">
+										<span class="mark">选择投资类型:</span>
+										<label class="group-label"><input type="radio" name="select-type">成本</label>
+										<label class="group-label"><input type="radio" name="select-type">投资</label>
+									</div>
+								</div>
+							</div>
+							<div class="operate-info add-line clearfix">
+								<div class="pull-left">
+									<div class="wrap-table-search pull-left">
+										<input type="search" class="inputCommon" placeholder="请输入物料编码" />
+										<span class="search-btn"></span>
+									</div>
+									<a href="" class="deafult-small-btn small-operate-btn">重置</a>
+								</div>
+								<div class="pull-right">
+									 <div class="pull-right wrap-add-btn">
+										<span class="batch-btn" style="padding:0 10px;">已选6个产品</span>
+										<a href="javascript:pop.showPop('setPop')" class="active-item">设置项目信息</a>
+										<a href="" class="active-item">添加到申领单</a>
+									</div>
+									<span class="batch-btn">批量设置申请量</span>
+									<div class="pull-right set-num">
+										<span class="operate-btn reduce-btn">-</span>
+										<input type="num" class="input inputCommon" value="100"/>
+										<span class="operate-btn plus-btn">+</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="table">
+							<table class="widthAll">
+								<thead class="outer-thead">
+									<tr>
+									  <td width="10%">全选<label class="label"><input type="checkbox" value="" name=""/></label></td>
+									  <td width="40%">产品信息</td>
+										<td width="15%">计划申领量(皮公里)</td>
+										<td width="15%">总价(元)</td>
+										<td width="10%">项目信息</td>
+										<td width="10%">资金类型(投资/成本)</td>
+									</tr>
+								</thead>
+								<tbody class="outer-tbody">
+									<tr class="outer-tr">
+									  <td>
+									    <label class="label">选择<input type="checkbox" value="" name=""/></label>
+									    <a href="" class="add-product">添加</a>
+									  </td>
+										<td>
+											<div class="wrap-pic pull-left">
+												<img src="../../statics/images/u124.png" alt=""/>
+											</div>
+											<div class="wrap-details">
+												<p><span>物料编号</span><strong>101699962</strong></p>
+												<p><span>一级分类</span><strong>光缆</strong></p>
+												<p><span>二级分类</span><strong>普通光缆</strong></p>
+												<p><span>规格型号</span><strong>12芯</strong></p>
+												<p class="active"><span>参考价格</span><strong>5000.00/皮公里</strong></p>
+											</div>
+										</td>
+										<td>
+										  <div class="set-num">
+												<input type="num" class="input inputCommon" value="100"/>
+											</div>
+											<p class="gray-color">需求可用量 <br/>200(皮公里)</p>
+										</td>
+										<td><span class="price">￥1000.0</span></td>
+										<td>
+										  <div class="set-num">
+												<input type="num" class="input inputCommon" value="100"/>
+											</div>
+										</td>
+										<td>成本</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--预览-->
+			<div class="lock" style="display:none;" id="previewLock">
+      	<div class="pop_room">
+      		<h5 class="pop-title">产品申领单预览<a href="javascript:pop.hidePop('previewLock')" class="close">x</a></h5>
+      		<div class="pop_content">
+      			<!--基本信息咯-->
+						<div class="wrap-table">
+							<div class="title-operate clearfix">
+								<div class="title-info pull-left">
+									<div class="manager-nav table-nav">
+										<strong class="all-name">基本信息</strong>
+									</div>
+								</div>
+							</div>
+							<div class="table">
+								<table class="widthAll">
+									<thead class="outer-thead">
+										<tr>
+											<td width="10%">申领单号</td>
+											<td width="10%">申领创建人</td>
+											<td width="8%">申领部门</td>
+											<td width="8%">申请时间</td>
+											<td width="10%">状态</td>
+											<td width="12%">汇总单号</td>
+											<td width="20%">附件信息</td>
+											<td width="12%">备注</td>
+										</tr>
+									</thead>
+									<tbody class="outer-tbody">
+										<tr class="outer-tr">
+											<td>
+											  GZXQ0001
+											</td>
+											<td>韦洪彬</td>
+											<td>信息服务部</td>
+											<td>2017-05-08</td>
+											<td><span class="type stop-type">审核中</span></td>
+											<td>审核中</td>
+											<td>
+											  <a href="" class="link">2017.4.8 广州移动申领计划说明2</a>
+											  <a href="" class="link">2017.4.8 广州移动申领计划说明2</a>
+											</td>
+											<td>审核时请重点核对产品库存量</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--物资明细-->
+						<div class="wrap-table">
+							<div class="title-operate clearfix">
+								<div class="title-info pull-left">
+									<div class="manager-nav table-nav">
+										<strong class="all-name">物资明细</strong>
+									</div>
+								</div>
+								<div class="operate-info pull-right">
+								   <a href="" class="small-operate-btn">导出</a>
+								</div>
+								
+							</div>
+							<div class="table scrollTable">
+								<table style="width:1900px">
+									<thead class="outer-thead">
+										<tr>
+											<td><label class="label">全选<input type="checkbox" value="" name=""></label></td>
+											<td>物资编码</td>
+											<td>一级分类</td>
+											<td>二级分类</td>
+											<td>规格型号</td>
+											<td>产品描述</td>
+											<td>需求审核量(皮公里)</td>
+											<td>需求数量(皮公里)</td>
+											<td>申领审核量(皮公里)</td>
+											<td>单位</td>
+											<td>项目编码</td>
+											<td>项目名称</td>
+											<td>参考单价(元)</td>
+											<td>申领金额(元)</td>
+											<td>申领审核金额(元)</td>
+											<td>MIS订单号</td>
+											<td>管理模式</td>
+											<td>备注</td>
+										</tr>
+									</thead>
+									<tbody class="outer-tbody">
+										<tr class="outer-tr">
+										  <td><label><input type="checkbox" value="" name=""></label></td>
+											<td>
+											  GZXQ0001
+											</td>
+											<td>光缆</td>
+											<td>普通光缆</td>
+											<td>GYTA\G.652D\6芯</td>
+											<td>需求/申领数量必须大于等于2，且为整数</td>
+											<td>100</td>
+											<td>90</td>
+											<td>50</td>
+											<td>公里</td>
+											<td>B1121L1C</td>
+											<td>16年移动LTE融合业务支持系统</td>
+											<td>1000</td>
+											<td>50000</td>
+											<td>50000</td>
+											<td>810011639</td>
+											<td>实体</td>
+											<td>16年移动LTE融合业务支持系统</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+      		</div>
+      	</div>
+    </div>
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="manager-footer">
+	  <div class="commonWidth">
+			<span class="name">中移动广东公司</span>
+			<span>©版权所有2008-2017</span>
+		</div>
+	</div>
+	<div class="lock" id="setPop" style="display:none" tabindex="-1">
+  	<div class="pop_room productBuild-pop">
+  		<h1>设置项目信息<a href="javascript:pop.hidePop('setPop');" class="close">x</a></h1>
+  		<div class="pop_content">
+  			<ul class="list clearfix">
+  				<li class="list-item">
+  					<div class="item-part">
+  					  <label>项目编码</label><input type="text"/>
+  					</div>
+  					<div class="item-part">
+  						<label>项目类型</label><input type="text"/></div>
+  				</li>
+  				<li class="list-item textCenter">
+						<button type="button" class="small-operate-btn">查询</button>
+						<button type="reset" class="deafult-small-btn small-operate-btn">重置</button>
+  				</li>
+  			</ul>
+  			<div class="pop-table">
+  				<table class="widthAll">
+	  				<thead>
+	  					<tr>
+	  						<td width="20%">操作</td>
+	  						<td width="30%">项目编码</td>
+	  						<td width="50%">项目名称</td>
+	  					</tr>
+	  				</thead>
+	  				<tbody>
+	  					<tr>
+	  						<td><input type="checkbox" name="" value=""/></td>
+	  						<td>B1121L1C</td>
+	  						<td>16年移动LET融合业务支持系统</td>
+	  					</tr>
+	  				</tbody>
+	  			</table>
+  			</div>
+  			<div class="manager-btn-group">	
+  				<a href="" class="btn active-btn">确定</a>
+  				<a href="javascript:pop.hidePop('setPop')" class="btn default-btn">取消</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <script src="../../statics/script/common.js"></script>
+  <script src="script/productBulid.js"></script>
+</body>
+</html>

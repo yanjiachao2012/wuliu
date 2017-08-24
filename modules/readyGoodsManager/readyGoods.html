@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>大区备货管理</title>
+	<link rel="stylesheet" href="../../statics/css/pagination.css"/>
+	<link rel="stylesheet" href="../../statics/css/main.css"/>
+	<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+	<script src="../../statics/script/laydate/laydate.js"></script>
+	<script src="../../statics/script/jquery.pagination.js"></script>
+	<script src="../../statics/script/common.js"></script>
+</head>
+</head>
+<body>
+  <!--头部-->
+	<div class="manager-header commonWidth">
+		<div class="header-left">
+			<span class="welcome-tip">欢迎您！</span>
+			<a href="" class="login-btn">登录</a>
+			<a href="" class="register-btn">注册</a>
+		</div>
+		<div class="header-right">
+			<i class="news-icon"></i>
+			<a href="" class="news-btn">消息</a>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="manager-logo-part">
+		<div class="commonWidth clearfix">
+			<div class="wrap-pic">
+				<a href="">
+					<img src="../../statics/images/img_logo.png" alt=""/>
+				</a>
+		  </div>
+		  <div class="wrap-search">
+				<input type="search" placeholder="输入产品名称" class="search"/>
+				<span class="wrap-icon">
+					<i class="icon-search"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="wrap-manager-content">
+		<div class="manager-content-tab">
+			<ul class="commonWidth clearfix">
+				<li class="tab-item"><a class="link" href="index.html">首页</a></li>
+				<li class="tab-item "><a class="link" href="modules/productManager/productManager.html">产品管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../requirePlan/requirePlan.html">需求计划</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="requirePlanBuild.html">需求计划创建</a></dd>
+				  	<dd class="menu-item"><a href="requirePlan.html">需求计划管理</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanTotal.html">地市需求计划单汇总</a></dd>
+				  	<dd class="menu-item"><a href="">省需求计划单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../requirePlanPurchase/requirePurchase.html">需求计划采购</a></li>
+				<li class="tab-item activeItem"><a class="link" href="../readyGoodsManager/readyGoods.html">大区备货管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../productClaim/productBulid.html">产品申领</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="productBulid.html">产品申领单创建</a></dd>
+				  	<dd class="menu-item"><a href="productClaim.html">产品申领单管理</a></dd>
+				  	<dd class="menu-item"><a href="productAreaTotal.html">地市产品申领单汇总</a></dd>
+				  	<dd class="menu-item"><a href="">省产品申领单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../deliverGoods/deliverGoods.html">大区确认发货</a></li>
+				<li class="tab-item"><a class="link" href="../collectionInfo/collectContractInfo.html">集采合同信息管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../statisticalReport/goodsRequirePlan.html">统计报表</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="goodsRequirePlan.html">需求计划统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsClaim.html">物资申领统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsMonitor.html">物资到货监控表</a></dd>
+				  	<dd class="menu-item"><a href="claimAndRequirePlan.html">月度准确度报表</a></dd>
+				  	<dd class="menu-item"><a href="">信用积分统计报表</a></dd>
+				  	<dd class="menu-item"><a href="">执行情况监控表</a></dd>
+				  </dl>
+				</li>
+			</ul>
+		</div>
+		<div class="manager-content commonWidth">
+			<div class="plan-search clearfix marginTop readyGoods-search">
+				<div class="search-left pull-left">
+					<div class="left-lawer clearfix">
+						<div class="inner-left pull-left inner-common">
+							<label class="label pull-left">规格型号</label>
+							<div class="wrap-input pull-left">
+								<input type="text" placeholder="输入规格型号" class="input inputCommon" value=""/>
+							</div>
+						</div>
+					  <div class="inner-right pull-left inner-common">
+					  	<label class="label pull-left">备货状态</label>
+							<div class="wrap-right-input pull-left">
+								<select class="input inputCommon">
+									<option value="">全部</option>
+									<option value="">备货完成</option>
+									<option value="">未备货</option>
+									<option value="">备货中</option>
+								</select>
+							</div>
+					  </div>
+					</div>
+					<div class="left-lawer clearfix">
+						<div class="inner-left wrap-time pull-left inner-common" style="width:1112px;">
+							<label class="label pull-left">创建日期</label>
+							<div style="overflow:hidden;">
+								<div class="pull-left time-left">
+								  <input type="text" id="startDate" readonly placeholder="开始日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+								<span class="pull-left">至</span>
+								<div class="pull-left time-left">
+								  <input type="text" id="endDate" readonly placeholder="结束日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-search-btn">
+					<a href="" class="btn query-btn"><i></i>查询</a>
+					<a href="" class="btn reset-btn"><i></i>重置</a>
+				</div>
+			</div>
+			<!--表格部分咯-->
+		<div class=" wrap-table commonWidth">
+			<div class="title-operate clearfix">
+					<div class="title-info pull-left">
+						<div class="manager-nav table-nav">
+							<strong class="all-name">大区备货管理</strong>
+							<i class="angle"></i>
+							<span>共36份</span>
+						</div>
+					</div>
+					<div class="operate-info pull-right">
+						<a href="" class="small-operate-btn deafult-small-btn">导出</a>
+						<a href="javascript:pop.showPop('setPop')" class="small-operate-btn">设置备货状态</a>
+					</div>
+				</div>
+				<div class="table">
+				  <!--待办-->
+					<table class="widthAll">
+						<thead class="outer-thead">
+							<tr>
+								<td width="4%"><label class="label">全选<input type="checkbox" name=""/></label></td>
+								<td width="8%">备货状态</td>
+								<td width="10%">时间</td>
+								<td width="10%">规格型号</td>
+								<td width="10%">采购数量(皮公里)</td>
+								<td width="15%">已备货数量(皮公里)</td>
+								<td width="15%">大区备货量(皮公里)</td>
+								<td width="10%">供应商名称</td>
+								<td width="10%">采购订单号(MIS)</td>
+							</tr>
+						</thead>
+						<tbody class="outer-tbody">
+							<tr class="outer-tr">
+							  <td><label><input type="checkbox" name=""/></label></td>
+							  <td><a class="type submit-type">备货中</a></td>
+								<td>2017年5月</td>
+								<td>地市需求计划</td>
+								<td>普通光缆\GYTA\G.652D\288芯</td>
+								<td>30000</td>
+								<td><div class="set-num"><input type="text" class="input inputCommon"/></div></td>
+								<td>长飞光纤光缆股份有限公司</td>
+								<td>810000083</td>
+							</tr>
+							<tr class="outer-tr">
+							  <td><label><input type="checkbox" name=""/></label></td>
+							  <td><a class="type red-type">未备货</a></td>
+								<td>2017年5月</td>
+								<td>地市需求计划</td>
+								<td>普通光缆\GYTA\G.652D\288芯</td>
+								<td>30000</td>
+								<td><div class="set-num"><input type="text" class="input inputCommon"/></div></td>
+								<td>长飞光纤光缆股份有限公司</td>
+								<td>810000083</td>
+							</tr>
+							<tr class="outer-tr">
+							  <td><label><input type="checkbox" name=""/></label></td>
+							  <td><a class="type finish-type">备货完成</a></td>
+								<td>2017年5月</td>
+								<td>地市需求计划</td>
+								<td>普通光缆\GYTA\G.652D\288芯</td>
+								<td>30000</td>
+								<td><div class="set-num"><input type="text" class="input inputCommon"/></div></td>
+								<td>长飞光纤光缆股份有限公司</td>
+								<td>810000083</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="pages">
+		        <div id="Pagination"></div>
+		        <div class="searchPage">
+		          <span class="page-go">跳转<input type="text">页</span>
+		          <a href="javascript:;" class="page-btn">确定</a>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="manager-footer">
+	  <div class="commonWidth">
+			<span class="name">中移动广东公司</span>
+			<span>©版权所有2008-2017</span>
+		</div>
+	</div>
+	<div class="lock alignCenter-lock" id="setPop" style="display:none">
+  	<div class="pop_room productBuild-pop">
+  		<h1>设置发货数量<a href="javascript:pop.hidePop('setPop');" class="close">x</a></h1>
+  		<div class="pop_content">
+  			<ul class="list clearfix">
+  				<li class="list-item">
+  					<div class="item-part">
+  						<label>备货状态</label>
+  						<select class="select">
+  						  <option value="">全部</option>
+							  <option value="">备货完成</option>
+							  <option value="">未备货</option>
+							  <option value="">备货中</option>
+  						</select>
+  					</div>
+  			</ul>
+  			<div class="manager-btn-group">	
+  				<a href="" class="btn active-btn">确定</a>
+  				<a href="" class="btn default-btn">取消</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</body>
+</html>

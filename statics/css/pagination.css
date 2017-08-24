@@ -1,0 +1,85 @@
+.pages {
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+.pages #Pagination {
+  *display: inline-block;
+  display: inline-block;
+  margin-right: 20px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.pages #Pagination .pagination {
+  *display: inline-block;
+  display: inline-block;
+  height: 40px;
+}
+.pages #Pagination .pagination a,
+.pages #Pagination .pagination span {
+  *display: inline-block;
+  display: inline-block;
+  padding: 11px 13px;
+  color: #3F4D57;
+  font-size: 14px;
+  cursor: pointer;
+}
+.pages #Pagination .pagination .current {
+  color: #468FDF;
+}
+.pages #Pagination .pagination .prev,
+.pages #Pagination .pagination .next {
+  padding: 11px 13px;
+  cursor: pointer;
+}
+.pages #Pagination .pagination .prev i,
+.pages #Pagination .pagination .next i {
+  *display: inline-block;
+  display: inline-block;
+  width: 4px;
+  height: 11px;
+  margin-right: 5px;
+}
+.pages #Pagination .pagination .prev {
+  border-right: none;
+}
+
+.pages #Pagination .pagination .pagination-break {
+  padding: 11px 5px;
+}
+.pages .searchPage {
+  *display: inline-block;
+  display: inline-block;
+  padding: 8px 0;
+}
+.pages .searchPage .page-sum {
+  padding: 11px 13px;
+  color: #999999;
+  font-size: 14px;
+}
+.pages .searchPage .page-go {
+  padding: 8px 0;
+  color: #999999;
+  font-size: 14px;
+  padding: 10px 0\9;
+  *padding: 6px 0;
+}
+.pages .searchPage .page-go input {
+  width: 50px;
+  height: 20px;
+  margin: 0 5px;
+  padding-left: 5px;
+  border: 1px solid #e4e4e4;
+}
+.pages .searchPage .page-btn {
+  margin: 9px 0 5px 5px;
+  padding: 4px 15px;
+  background: #468FDF;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+

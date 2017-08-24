@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>省需求汇总单管理</title>
+	<link rel="stylesheet" href="../../statics/css/pagination.css"/>
+	<link rel="stylesheet" href="../../statics/css/main.css"/>
+	<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+	<script src="../../statics/script/jquery.pagination.js"></script>
+</head>
+<body>
+  <!--头部-->
+	<div class="manager-header commonWidth">
+		<div class="header-left">
+			<span class="welcome-tip">欢迎您！</span>
+			<a href="" class="login-btn">登录</a>
+			<a href="" class="register-btn">注册</a>
+		</div>
+		<div class="header-right">
+			<i class="news-icon"></i>
+			<a href="" class="news-btn">消息</a>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="manager-logo-part">
+		<div class="commonWidth clearfix">
+			<div class="wrap-pic">
+				<a href="">
+					<img src="../../statics/images/img_logo.png" alt=""/>
+				</a>
+		  </div>
+		  <div class="wrap-search">
+				<input type="search" placeholder="输入产品名称" class="search"/>
+				<span class="wrap-icon">
+					<i class="icon-search"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="wrap-manager-content">
+		<div class="manager-content-tab">
+			<ul class="commonWidth clearfix">
+				<li class="tab-item"><a class="link" href="index.html">首页</a></li>
+				<li class="tab-item "><a class="link" href="modules/productManager/productManager.html">产品管理</a></li>
+				<li class="tab-item activeItem dropdown-item">
+				  <a class="link" href="../requirePlan/requirePlan.html">需求计划</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="requirePlanBuild.html">需求计划创建</a></dd>
+				  	<dd class="menu-item"><a href="requirePlan.html">需求计划管理</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanTotal.html">地市需求计划单汇总</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanProviceTotal.html">省需求计划单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../requirePlanPurchase/requirePurchase.html">需求计划采购</a></li>
+				<li class="tab-item"><a class="link" href="../readyGoodsManager/readyGoods.html">大区备货管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../productClaim/productBulid.html">产品申领</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="productBulid.html">产品申领单创建</a></dd>
+				  	<dd class="menu-item"><a href="productClaim.html">产品申领单管理</a></dd>
+				  	<dd class="menu-item"><a href="productAreaTotal.html">地市产品申领单汇总</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanProviceTotal.html">省产品申领单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../deliverGoods/deliverGoods.html">大区确认发货</a></li>
+				<li class="tab-item"><a class="link" href="../collectionInfo/collectContractInfo.html">集采合同信息管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../statisticalReport/goodsRequirePlan.html">统计报表</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="goodsRequirePlan.html">需求计划统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsClaim.html">物资申领统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsMonitor.html">物资到货监控表</a></dd>
+				  	<dd class="menu-item"><a href="claimAndRequirePlan.html">月度准确度报表</a></dd>
+				  	<dd class="menu-item"><a href="creditScore.html">信用积分统计报表</a></dd>
+				  	<dd class="menu-item"><a href="situationMonitor.html">执行情况监控表</a></dd>
+				  </dl>
+				</li>
+			</ul>
+		</div>
+		<div class="manager-content commonWidth">
+			<div class="plan-search area-search provice-search clearfix">
+				<div class="search-left pull-left">
+					<div class="left-lawer clearfix">
+					  <div class="inner-right inner-common">
+					  	<label class="label pull-left">省需求汇总单号</label>
+							<div class="wrap-right-input">
+								<input type="text" class="input inputCommon" value=""/>
+							</div>
+					  </div>
+					</div>
+					<div class="left-lawer clearfix">
+						<div class="inner-left wrap-time pull-left inner-common">
+							<label class="label pull-left">汇总时间</label>
+							<div class=" pull-left">
+								<div class="pull-left time-left">
+								  <input type="text" readonly placeholder="开始日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+								<span class="pull-left">至</span>
+								<div class="pull-left time-left">
+								  <input type="text" readonly placeholder="结束日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+							</div>
+						</div>
+					  <div class=" wrap-status pull-left">
+					  	<div class="search-status pull-left first-status">
+								<label class="label pull-left">状态</label>
+								<div class="wrap-input">
+									<select class="input inputCommon" >
+										<option value="1">全部</option>
+										<option value="2">广州</option>
+										<option value="3">深圳</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-status pull-left first-status">
+								<label class="label pull-left">一级分类</label>
+								<div class="wrap-input">
+									<select class="input inputCommon" >
+										<option value="1">全部</option>
+										<option value="2">广州</option>
+										<option value="3">深圳</option>
+									</select>
+								</div>
+							</div>
+							<div class="search-status pull-left">
+								<label class="label pull-left">二级分类</label>
+								<div class="wrap-input">
+									<select class="input inputCommon" >
+										<option value="1">全部</option>
+										<option value="2">广州</option>
+										<option value="3">深圳</option>
+									</select>
+								</div>
+							</div>
+					  </div>
+					</div>
+				</div>
+				<div class="wrap-search-btn">
+					<a href="" class="btn query-btn"><i></i>查询</a>
+					<a href="" class="btn reset-btn"><i></i>重置</a>
+				</div>
+			</div>
+			<div class="manager-nav section-nav">
+				<span>全部结果</span>
+				<i class="angle"></i>
+				<span>共136份</span>
+				<div class="pull-right">
+					<a href="javascript:pop.showPop('setScm')" class="deafult-small-btn small-operate-btn">设置SCM单号</a>
+					<a href="javascript:pop.showPop('setMIS')" class="deafult-small-btn small-operate-btn">设置MIS单号</a>
+					<a href="" class="small-operate-btn">导出</a>
+					<a href="" class="small-operate-btn">汇总</a>
+				</div>
+			</div>
+			<!--表格部分咯-->
+			<div class="wrap-table">
+				<div class="table">
+					<table class="widthAll">
+						<thead class="outer-thead">
+							<tr>
+								<td width="8%"><label class="label"><input type="checkbox" name="" /></label></td>
+							  <td width="8%">操作</td>
+							  <td width="15%">省需求汇总号</td>
+							  <td width="8%">一级分类</td>
+								<td width="8%">二级分类</td>
+								<td width="8%">汇总量(皮公里)</td>
+								<td width="8%">汇总金额(元)</td>
+								<td width="8%">需求汇总时间</td>
+								<td width="8%">管理模式</td>
+								<td width="8%">状态</td>
+								<td width="8%">SCM单号</td>
+								<td width="8%">MIS单号</td>
+							</tr>
+						</thead>
+						<tbody class="outer-tbody">
+							<tr class="outer-tr">
+							  <td><label class="label"><input type="checkbox" name="" /></label></td>
+							  <td><a class="edit-type add-padding">编辑</a><a href="javascript:" onclick="toggleShow(this)" class="show-type add-padding">查看</a></td>
+								<td>BZHCPKXQH201706</td>
+								<td>光缆</td>
+								<td>普通光缆</td>
+								<td>150</td>
+								<td>5000.00</td>
+								<td>2017-06-07</td>
+								<td>实体</td>
+								<td><span class="type submit-type">已提交</span></td>
+								<td>
+								   <div class="set-num">
+								   	<input type="text" class="input inputCommon" />
+								   </div>
+                </td>
+								<td>
+								   <div class="set-num">
+								   	<input type="text" class="input inputCommon" />
+								   </div>
+                </td>
+							</tr>
+							<tr class="toggle-show" style="display:none;">
+							  <td colspan="15">
+							  	<!--基本信息咯-->
+									<div class="wrap-table inner-table">
+										<div class="title-operate clearfix">
+											<div class="title-info pull-left">
+												<div class="manager-nav table-nav">
+													<strong class="all-name tab-name active-name">地市需求汇总单</strong>
+													<strong class="all-name tab-name">地市需求汇总单</strong>
+												</div>
+											</div>
+										</div>
+										<div class="table-tab">
+											<div class="table">
+												<table class="widthAll">
+													<thead class="outer-thead">
+														<tr>
+															<td width="8%">地市需求汇总单号</td>
+															<td width="6%">需求组织</td>
+															<td width="6%">需求汇总人</td>
+															<td width="6%">一级分类</td>
+															<td width="7%">二级分类</td>
+															<td width="6%">规格型号</td>
+															<td width="8%">需求计划量(皮公里)</td>
+															<td width="6%">需求审核量(皮公里)</td>
+															<td width="8%">需求申请金额(元)</td>
+															<td width="8%">需求审核金额(元)</td>
+															<td width="8%">需求汇总时间</td>
+															<td width="8%">资金类型(投资/成本)</td>
+															<td width="8%">状态</td>
+															<td width="8%">备注</td>
+														</tr>
+													</thead>
+													<tbody class="outer-tbody">
+														<tr class="outer-tr">
+															<td>BZHCPKXQGZ201705160001</td>
+															<td>采购物流中心</td>
+															<td>黄烁</td>
+															<td>光缆</td>
+															<td>普通光缆</td>
+															<td>GYTA24芯</td>
+															<td>100</td>
+															<td>100</td>
+															<td>100</td>
+															<td>100</td>
+															<td>2017-05-06</td>
+															<td>实体</td>
+															<td><span class="type submit-type">已提交</span></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="table scrollTable" style="display:none;">
+											  <div class="pull-right wrap-batch-btn">
+													<span class="batch-btn">批量设置申请量</span>
+													<div class="pull-right set-num">
+														<span class="operate-btn reduce-btn">-</span>
+														<input type="text" class="input inputCommon" value="100"/>
+														<span class="operate-btn plus-btn">+</span>
+													</div>
+												</div>
+												<table width="1800">
+													<thead class="outer-thead">
+														<tr>
+															<td>全选<label class="label"><input type="checkbox" name="checkbox"/></label></td>
+															<td>需求计算单号</td>
+															<td>物资编码</td>
+															<td>一级分类</td>
+															<td>二级分类</td>
+															<td>规格型号</td>
+															<td>需求计划量(皮公里)</td>
+															<td>需求审核量(皮公里)</td>
+															<td>需求申请部门</td>
+															<td>需求创建人</td>
+															<td>需求申请时间</td>
+                              <td>单位</td>
+                              <td>需求申请金额(元)</td>
+                              <td>需求审核金额(元)</td>
+                              <td>产品描述</td>
+                              <td>资金类型(投资/成本)</td>
+															<td>管理模式</td>
+															<td>备注</td>
+														</tr>
+													</thead>
+													<tbody class="outer-tbody">
+														<tr class="outer-tr">
+															<td><label class="label"><input type="checkbox" name=""></label></td>
+															<td>g592ck3cdegxsdedeed9</td>
+															<td>10201023</td>
+															<td>光缆</td>
+															<td>普通光缆</td>
+															<td>GYTA24芯</td>
+															<td>100</td>
+															<td><div class="set-num">
+																<input type="text" class="input inputCommon">
+															</div></td>
+															<td>采购物流中心</td>
+															<td>黄硕</td>
+															<td>2016-11-11</td>
+															<td>公里</td>
+															<td>50000</td>
+															<td>10000</td>
+															<td>需求/申领数量沙和尚</td>
+															<td>成本</td>
+															<td>实体</td>
+															<td>备注</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+							  </td>
+							</tr>
+							<tr class="outer-tr">
+							  <td><label class="label"><input type="checkbox" name="" /></label></td>
+							  <td><a class="edit-type add-padding">编辑</a><a href="javascript:" onclick="toggleShow(this)" class="show-type add-padding">查看</a></td>
+								<td>BZHCPKXQH201706</td>
+								<td>光缆</td>
+								<td>普通光缆</td>
+								<td>150</td>
+								<td>5000.00</td>
+								<td>2017-06-07</td>
+								<td>实体</td>
+								<td><span class="type submit-type">已提交</span></td>
+								<td>
+								   <div class="set-num">
+								   	<input type="text" class="input inputCommon" />
+								   </div>
+                </td>
+								<td>
+								   <div class="set-num">
+								   	<input type="text" class="input inputCommon" />
+								   </div>
+                </td>
+							</tr>
+							<tr class="toggle-show" style="display:none;">
+							  <td colspan="15">
+							  	<!--基本信息咯-->
+									<div class="wrap-table inner-table">
+										<div class="title-operate clearfix">
+											<div class="title-info pull-left">
+												<div class="manager-nav table-nav">
+													<strong class="all-name tab-name active-name">地市需求汇总单</strong>
+													<strong class="all-name tab-name">地市需求汇总单</strong>
+												</div>
+											</div>
+										</div>
+										<div class="table-tab">
+											<div class="table">
+												<table class="widthAll">
+													<thead class="outer-thead">
+														<tr>
+															<td width="8%">地市需求汇总单号</td>
+															<td width="6%">需求组织</td>
+															<td width="6%">需求汇总人</td>
+															<td width="6%">一级分类</td>
+															<td width="7%">二级分类</td>
+															<td width="6%">规格型号</td>
+															<td width="8%">需求计划量(皮公里)</td>
+															<td width="6%">需求审核量(皮公里)</td>
+															<td width="8%">需求申请金额(元)</td>
+															<td width="8%">需求审核金额(元)</td>
+															<td width="8%">需求汇总时间</td>
+															<td width="8%">资金类型(投资/成本)</td>
+															<td width="8%">状态</td>
+															<td width="8%">备注</td>
+														</tr>
+													</thead>
+													<tbody class="outer-tbody">
+														<tr class="outer-tr">
+															<td>BZHCPKXQGZ201705160001</td>
+															<td>采购物流中心</td>
+															<td>黄烁</td>
+															<td>光缆</td>
+															<td>普通光缆</td>
+															<td>GYTA24芯</td>
+															<td>100</td>
+															<td>100</td>
+															<td>100</td>
+															<td>100</td>
+															<td>2017-05-06</td>
+															<td>实体</td>
+															<td><span class="type submit-type">已提交</span></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="table scrollTable" style="display:none;">
+											  <div class="pull-right wrap-batch-btn">
+													<span class="batch-btn">批量设置申请量</span>
+													<div class="pull-right set-num">
+														<span class="operate-btn reduce-btn">-</span>
+														<input type="text" class="input inputCommon" value="100"/>
+														<span class="operate-btn plus-btn">+</span>
+													</div>
+												</div>
+												<table width="1800">
+													<thead class="outer-thead">
+														<tr>
+															<td>全选<label class="label"><input type="checkbox" name="checkbox"/></label></td>
+															<td>需求计算单号</td>
+															<td>物资编码</td>
+															<td>一级分类</td>
+															<td>二级分类</td>
+															<td>规格型号</td>
+															<td>需求计划量(皮公里)</td>
+															<td>需求审核量(皮公里)</td>
+															<td>需求申请部门</td>
+															<td>需求创建人</td>
+															<td>需求申请时间</td>
+                              <td>单位</td>
+                              <td>需求申请金额(元)</td>
+                              <td>需求审核金额(元)</td>
+                              <td>产品描述</td>
+                              <td>资金类型(投资/成本)</td>
+															<td>管理模式</td>
+															<td>备注</td>
+														</tr>
+													</thead>
+													<tbody class="outer-tbody">
+														<tr class="outer-tr">
+															<td><label class="label"><input type="checkbox" name=""></label></td>
+															<td>g592ck3cdegxsdedeed9</td>
+															<td>10201023</td>
+															<td>光缆</td>
+															<td>普通光缆</td>
+															<td>GYTA24芯</td>
+															<td>100</td>
+															<td><div class="set-num">
+																<input type="text" class="input inputCommon">
+															</div></td>
+															<td>采购物流中心</td>
+															<td>黄硕</td>
+															<td>2016-11-11</td>
+															<td>公里</td>
+															<td>50000</td>
+															<td>10000</td>
+															<td>需求/申领数量沙和尚</td>
+															<td>成本</td>
+															<td>实体</td>
+															<td>备注</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+							  </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="pages">
+        <div id="Pagination"></div>
+        <div class="searchPage">
+          <span class="page-go">跳转<input type="text">页</span>
+          <a href="javascript:;" class="page-btn">确定</a>
+        </div>
+      </div>
+      
+		</div>
+		<div class="lock" style="display:none;">
+      	<div class="pop_room">
+      		<h5 class="pop-title">需求单明细<a href="" class="close">x</a></h5>
+      		<div class="pop_content">
+      			<div class="manager-btn-group">
+      				<a href="" class="btn default-btn">打印</a>
+      				<a href="" class="btn active-btn">导出</a>
+      			</div>
+      			<!--基本信息咯-->
+						<div class="wrap-table">
+							<div class="title-operate clearfix">
+								<div class="title-info pull-left">
+									<div class="manager-nav table-nav">
+										<strong class="all-name">基本信息</strong>
+									</div>
+								</div>
+							</div>
+							<div class="table">
+								<table class="widthAll">
+									<thead class="outer-thead">
+										<tr>
+											<td width="10%">需求计划单号</td>
+											<td width="10%">需求创建人</td>
+											<td width="10%">需求创建部门</td>
+											<td width="10%">需求申请时间</td>
+											<td width="10%">状态</td>
+											<td width="12%">汇总单号</td>
+											<td width="12%">备注</td>
+										</tr>
+									</thead>
+									<tbody class="outer-tbody">
+										<tr class="outer-tr">
+											<td>
+											  GZXQ0001
+											</td>
+											<td>韦洪彬</td>
+											<td>信息服务部</td>
+											<td>2017-05-08</td>
+											<td><span class="type stop-type">审核中</span></td>
+											<td>审核中</td>
+											<td>审核时请重点核对产品库存量</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--物资明细-->
+						<div class="wrap-table">
+							<div class="title-operate clearfix">
+								<div class="title-info pull-left">
+									<div class="manager-nav table-nav">
+										<strong class="all-name">物资明细</strong>
+									</div>
+								</div>
+							</div>
+							<div class="table scrollTable">
+								<table style="width:1800px">
+									<thead class="outer-thead">
+										<tr>
+											<td><label><input type="checkbox" value="" name=""></label></td>
+											<td>物资编码</td>
+											<td>一级分类</td>
+											<td>二级分类</td>
+											<td>规格型号</td>
+											<td>产品描述</td>
+											<td>需求计划量(皮公里)</td>
+											<td>需求审核量(皮公里)</td>
+											<td>单位</td>
+											<td>参考单价(元)</td>
+											<td>需求申请金额(元)</td>
+											<td>需求审核金额(元)</td>
+											<td>管理模式</td>
+										</tr>
+									</thead>
+									<tbody class="outer-tbody">
+										<tr class="outer-tr">
+										  <td><label><input type="checkbox" value="" name=""></label></td>
+											<td>
+											  GZXQ0001
+											</td>
+											<td>韦洪彬</td>
+											<td>信息服务部</td>
+											<td>2017-05-08</td>
+											<td>审核中</td>
+											<td>审核中</td>
+											<td>审核时请重点核对产品库存量</td>
+											<td>信息服务部</td>
+											<td>2017-05-08</td>
+											<td>审核中</td>
+											<td>审核中</td>
+											<td>审核时请重点核对产品库存量</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--操作日志-->
+						<div class="wrap-table">
+							<div class="title-operate clearfix">
+								<div class="title-info pull-left">
+									<div class="manager-nav table-nav">
+										<strong class="all-name">操作日志</strong>
+									</div>
+								</div>
+							</div>
+							<div class="table show-process">
+								<div class="wrap-inner-table process-status-color">
+									<ul class="wrap-content">
+										<li class="process-title inner-thead-bg">
+											<span class="span span3">操作时间</span>
+											<span class="span span2">操作人</span>
+											<span class="span span2">所属部门</span>
+											<span class="span span2">操作步骤</span>
+											<span class="span span3">操作描述</span>
+										</li>
+										<li class="process-item clearfix process-first">
+											<span class="span span3">
+			                    2017-05-08 12:02:12
+											</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span2">等待审批</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span3">等待审批</span>
+										</li>
+										<li class="process-item clearfix">
+											<span class="span span3">
+												2017-05-08 12:02:12
+											</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span2">等待审批</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span3">等待审批</span>
+										</li>
+										<li class="process-item clearfix">
+											<span class="span span3">
+												2017-05-08 12:02:12
+											</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span2">等待审批</span>
+											<span class="span span2">市需求部门领导审批</span>
+											<span class="span span3">等待审批</span>
+										</li>
+									</ul>
+								</div>
+							  
+								<table class="inner-table widthAll" style="display:none">
+									<thead class="inner-thead inner-thead-bg">
+									  <tr class="inner-tr">
+									    <td>操作时间</td>
+									    <td>操作人</td>
+									    <td>所属部门</td>
+									    <td>操作步骤</td>
+									    <td>操作描述</td>
+									  </tr>
+									 </thead>
+									 <tbody class="inner-tbody">
+									 	<tr>
+									 	  <td><span class="process-first process-icon"></span>2017-05-08 12:02:12</td>
+									 	  <td>韦洪彬</td>
+									 	  <td>信息服务部</td>
+									 	  <td>市需求部门领导审批</td>
+									 	  <td>统一罗</td>
+									 	</tr>
+									 	<tr>
+									 	  <td><span class="process-icon"></span>2017-05-08 12:02:12</td>
+									 	  <td>市需求部门领导审批</td>
+									 	  <td>提交成功</td>
+									 	  <td>市需求部门领导审批</td>
+									 	  <td>等待审批</td>
+									 	</tr>
+									 	<tr>
+									 	  <td><span class="process-icon"></span>2017-05-08 12:02:12</td>
+									 	  <td>市需求部门室经理</td>
+									 	  <td>审批通</td>
+									 	  <td>市需求部门领导审批</td>
+									 	  <td>等待审批</td>
+									 	</tr>
+									 </tbody>
+								</table>
+							</div>
+						</div>
+      		</div>
+      	</div>
+    </div>
+	</div>
+	<!--尾部-->
+	<div class="manager-footer">
+	  <div class="commonWidth">
+			<span class="name">中移动广东公司</span>
+			<span>©版权所有2008-2017</span>
+		</div>
+	</div>
+	<!--SCM弹框-->
+	<div class="lock" id="setScm" style="display:none">
+  	<div class="pop_room productBuild-pop">
+  		<h1>设置SCM单号<a href="javascript:pop.hidePop('setScm');" class="close">x</a></h1>
+  		<div class="pop_content">
+  			<div class="wrap-input"><label>请输入SCM单号</label><input type="text"/></div>
+  			<div class="manager-btn-group">	
+  				<a href="" class="btn active-btn">确定</a>
+  				<a href="javascript:pop.hidePop('setScm')" class="btn default-btn">取消</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!--MIS弹框-->
+	<div class="lock" id="setMIS" style="display:none">
+  	<div class="pop_room productBuild-pop">
+  		<h1>设置MIS单号<a href="javascript:pop.hidePop('setMIS');" class="close">x</a></h1>
+  		<div class="pop_content">
+  			<div class="wrap-input"><label>请输入MIS单号</label><input type="text"/></div>
+  			<div class="manager-btn-group">	
+  				<a href="" class="btn active-btn">确定</a>
+  				<a href="javascript:pop.hidePop('setMIS')" class="btn default-btn">取消</a>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+	<script src="../../statics/script/common.js"></script>
+	<script>
+	  $(document).ready(function() {
+        $("#Pagination").pagination("6");
+
+        //tab切换
+
+	$(".inner-table").tab({
+		tabs: ".table-nav .tab-name", //标签
+		changes: ".table-tab .table", //切换对象
+		defaultObj: 0, //默认展示对象序号
+		active: "active-name", //标签选中状态名，默认为active
+		onTab: function(index) {
+			console.log($(this).html())
+			console.log(index)
+		} //回调函数
+	});
+    });
+		function toggleShow(obj){
+			$(obj).parents('tr').next('.toggle-show').toggle();
+		}
+	</script>
+</body>
+</html>

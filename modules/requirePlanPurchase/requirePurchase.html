@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>需求计划采购</title>
+	<link rel="stylesheet" href="../../statics/css/pagination.css"/>
+	<link rel="stylesheet" href="../../statics/css/main.css"/>
+	<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+	<script src="../../statics/script/jquery.pagination.js"></script>
+</head>
+<body>
+  <!--头部-->
+	<div class="manager-header commonWidth">
+		<div class="header-left">
+			<span class="welcome-tip">欢迎您！</span>
+			<a href="" class="login-btn">登录</a>
+			<a href="" class="register-btn">注册</a>
+		</div>
+		<div class="header-right">
+			<i class="news-icon"></i>
+			<a href="" class="news-btn">消息</a>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="manager-logo-part">
+		<div class="commonWidth clearfix">
+			<div class="wrap-pic">
+				<a href="">
+					<img src="../../statics/images/img_logo.png" alt=""/>
+				</a>
+		  </div>
+		  <div class="wrap-search">
+				<input type="search" placeholder="输入产品名称" class="search"/>
+				<span class="wrap-icon">
+					<i class="icon-search"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="wrap-manager-content">
+		<div class="manager-content-tab">
+			<ul class="commonWidth clearfix">
+				<li class="tab-item"><a class="link" href="index.html">首页</a></li>
+				<li class="tab-item "><a class="link" href="modules/productManager/productManager.html">产品管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../requirePlan/requirePlan.html">需求计划</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="requirePlanBuild.html">需求计划创建</a></dd>
+				  	<dd class="menu-item"><a href="requirePlan.html">需求计划管理</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanTotal.html">地市需求计划单汇总</a></dd>
+				  	<dd class="menu-item"><a href="requirePlanProviceTotal.html">省需求计划单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item activeItem"><a class="link" href="../requirePlanPurchase/requirePurchase.html">需求计划采购</a></li>
+				<li class="tab-item"><a class="link" href="../readyGoodsManager/readyGoods.html">大区备货管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../productClaim/productBulid.html">产品申领</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="productBulid.html">产品申领单创建</a></dd>
+				  	<dd class="menu-item"><a href="productClaim.html">产品申领单管理</a></dd>
+				  	<dd class="menu-item"><a href="productAreaTotal.html">地市产品申领单汇总</a></dd>
+				  	<dd class="menu-item"><a href="">省产品申领单汇总</a></dd>
+				  </dl>
+				</li>
+				<li class="tab-item"><a class="link" href="../deliverGoods/deliverGoods.html">大区确认发货</a></li>
+				<li class="tab-item"><a class="link" href="../collectionInfo/collectContractInfo.html">集采合同信息管理</a></li>
+				<li class="tab-item dropdown-item">
+				  <a class="link" href="../statisticalReport/goodsRequirePlan.html">统计报表</a>
+				  <dl class="dropdown-menu">
+				  	<dd class="menu-item"><a href="goodsRequirePlan.html">需求计划统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsClaim.html">物资申领统计报表</a></dd>
+				  	<dd class="menu-item"><a href="goodsMonitor.html">物资到货监控表</a></dd>
+				  	<dd class="menu-item"><a href="claimAndRequirePlan.html">月度准确度报表</a></dd>
+				  	<dd class="menu-item"><a href="creditScore.html">信用积分统计报表</a></dd>
+				  	<dd class="menu-item"><a href="situationMonitor.html">执行情况监控表</a></dd>
+				  </dl>
+				</li>
+			</ul>
+		</div>
+		<div class="manager-content commonWidth">
+			<div class="plan-search marginTop clearfix">
+				<div class="search-left pull-left">
+					<div class="left-lawer clearfix">
+						<div class="inner-left wrap-time pull-left inner-common">
+							<label class="label pull-left">日期</label>
+							<div class=" pull-left">
+								<div class="pull-left time-left">
+								  <input type="text" readonly placeholder="开始日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+								<span class="pull-left">至</span>
+								<div class="pull-left time-left">
+								  <input type="text" readonly placeholder="结束日期" class="input inputCommon" value=""/>
+								  <i class="time-icon"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-search-btn">
+					<a href="" class="btn query-btn"><i></i>查询</a>
+				</div>
+			</div>
+			<div class="manager-nav section-nav">
+				<span>需求计划采购信息表</span>
+				<div class="pull-right">
+					<a href="" class="small-operate-btn">导出</a>
+				</div>
+			</div>
+			<!--表格部分咯-->
+			<div class="wrap-table">
+				<div class="table scrollTable">
+					<table style="width:2000px">
+						<thead class="outer-thead">
+							<tr>
+							  <td width="8%">时间</td>
+							  <td width="8%">规格型号</td>
+							  <td>广州</td>
+								<td>深圳</td>
+								<td>东莞</td>
+								<td>佛山</td>
+								<td>云浮</td>
+								<td>茂名</td>
+								<td>江门</td>
+								<td>清远</td>
+								<td>湛江</td>
+								<td>阳江</td>
+								<td>肇庆</td>
+								<td>河源</td>
+								<td>梅州</td>
+								<td>珠海</td>
+								<td>惠州</td>
+								<td>揭阳</td>
+								<td>中山</td>
+								<td>潮州</td>
+								<td>汕尾</td>
+								<td>汕头</td>
+								<td>韶关</td>
+								<td>本月需求总计(皮公里)</td>
+								<td>上月需求剩余量(皮公里)</td>
+								<td>当月存量差额(皮公里)</td>
+								<td>SCM单号</td>
+								<td>MIS单号</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody class="outer-tbody">
+							<tr class="outer-tr">
+							  <td>2017年2月</td>
+							  <td><span class="type stop-type">普通光缆\GYTA\G.652D\288</span></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td>
+						    	<div class="set-num">
+						    		<input type="text" class="input inputCommon"/>
+						    	</div>
+						    </td>
+						    <td>
+						    	<div class="set-num">
+						    		<input type="text" class="input inputCommon"/>
+						    	</div>
+						    </td>
+						    <td>
+						    	<a href="" class="small-operate-btn">确定</a>
+						    </td>
+							</tr>
+							<tr class="outer-tr">
+							  <td>2017年2月</td>
+							  <td><span class="type stop-type">普通光缆\GYTA\G.652D\288</span></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td></td>
+						    <td>
+						    	<div class="set-num">
+						    		<input type="text" class="input inputCommon"/>
+						    	</div>
+						    </td>
+						    <td>
+						    	<div class="set-num">
+						    		<input type="text" class="input inputCommon"/>
+						    	</div>
+						    </td>
+						    <td>
+						    	<a href="" class="small-operate-btn">确定</a>
+						    </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="pages">
+        <div id="Pagination"></div>
+        <div class="searchPage">
+          <span class="page-go">跳转<input type="text">页</span>
+          <a href="javascript:;" class="page-btn">确定</a>
+        </div>
+      </div>
+      
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="manager-footer">
+	  <div class="commonWidth">
+			<span class="name">中移动广东公司</span>
+			<span>©版权所有2008-2017</span>
+		</div>
+	</div>
+	<script>
+	  $(document).ready(function() {
+        $("#Pagination").pagination("6");
+    });
+	</script>
+</body>
+</html>
